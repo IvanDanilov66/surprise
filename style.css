@@ -544,30 +544,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
-  }
-
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .couple-names {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .announcement-card,
-  .reveal-section,
-  .message-section {
-    padding: 25px;
-  }
-
-  .announcement-title {
-    font-size: 2rem;
-  }
-
-  .announcement-text {
-    font-size: 1.1rem;
+    padding: 10px;
   }
 
   .main-greeting-card {
@@ -577,20 +554,30 @@ body {
   .card-front,
   .card-back {
     width: 95%;
-    height: 85%;
-    padding: 30px;
+    height: 90%;
+    padding: 20px;
+    border-radius: 20px;
   }
 
   .card-title {
     font-size: 2.5rem;
+    margin-bottom: 15px;
   }
 
   .card-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
   }
 
   .card-message p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+
+  .open-instruction {
+    padding: 15px;
+    margin-top: 20px;
   }
 
   .open-instruction p {
@@ -599,10 +586,12 @@ body {
 
   .reveal-title {
     font-size: 2rem;
+    margin-bottom: 20px;
   }
 
   .gender-title {
     font-size: 2.5rem;
+    margin-bottom: 10px;
   }
 
   .gender-subtitle {
@@ -611,20 +600,48 @@ body {
 
   .celebration-message p {
     font-size: 1.1rem;
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  .gender-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .card-front,
+  .card-back {
+    width: 98%;
+    height: 95%;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
   .card-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
   }
 
   .card-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
   }
 
   .card-message p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  .open-instruction {
+    padding: 12px;
+    margin-top: 15px;
   }
 
   .open-instruction p {
@@ -632,11 +649,13 @@ body {
   }
 
   .reveal-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
   }
 
   .gender-title {
     font-size: 2rem;
+    margin-bottom: 8px;
   }
 
   .gender-subtitle {
@@ -645,31 +664,110 @@ body {
 
   .celebration-message p {
     font-size: 1rem;
+    margin: 6px 0;
+    line-height: 1.4;
   }
 
-  .announcement-text {
-    font-size: 1rem;
-  }
-
-  .mystery-box {
-    width: 120px;
-    height: 120px;
-  }
-
-  .question-mark {
+  .gender-icon {
     font-size: 2.5rem;
+    margin-bottom: 10px;
   }
 
-  .popup-content {
-    padding: 20px;
-    max-width: 300px;
+  .card-decoration {
+    top: 15px;
+    right: 15px;
   }
 
-  .gender-title {
+  .ribbon {
+    font-size: 2rem;
+  }
+
+  .stars {
+    font-size: 1.5rem;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card-front,
+  .card-back {
+    width: 99%;
+    height: 98%;
+    padding: 10px;
+  }
+
+  .card-title {
     font-size: 1.5rem;
   }
 
-  .popup-header h2 {
+  .card-subtitle {
     font-size: 1.2rem;
+  }
+
+  .card-message p {
+    font-size: 1rem;
+  }
+
+  .open-instruction p {
+    font-size: 0.9rem;
+  }
+
+  .reveal-title {
+    font-size: 1.4rem;
+  }
+
+  .gender-title {
+    font-size: 1.8rem;
+  }
+
+  .gender-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .celebration-message p {
+    font-size: 0.9rem;
+  }
+
+  .gender-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .card-message p {
+    font-size: 0.9rem;
+  }
+
+  .open-instruction p {
+    font-size: 0.8rem;
+  }
+
+  .reveal-title {
+    font-size: 1.2rem;
+  }
+
+  .gender-title {
+    font-size: 1.6rem;
+  }
+
+  .gender-subtitle {
+    font-size: 1rem;
+  }
+
+  .celebration-message p {
+    font-size: 0.8rem;
+  }
+
+  .gender-icon {
+    font-size: 1.8rem;
   }
 }
