@@ -246,7 +246,7 @@ body {
 }
 
 .card-title {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursive, "Comic Sans MS", cursive, sans-serif;
   font-size: 3.5rem;
   font-weight: 400;
   color: #1e293b;
@@ -255,7 +255,7 @@ body {
 }
 
 .card-subtitle {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
   font-size: 2.2rem;
   color: #475569;
   margin-bottom: 40px;
@@ -267,7 +267,7 @@ body {
 }
 
 .card-message p {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
   font-size: 1.6rem;
   color: #334155;
   margin: 15px 0;
@@ -308,7 +308,7 @@ body {
 }
 
 .reveal-title {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursive, "Comic Sans MS", cursive, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 30px;
@@ -326,7 +326,7 @@ body {
 }
 
 .gender-title {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursive, "Comic Sans MS", cursive, sans-serif;
   font-size: 3.5rem;
   font-weight: 400;
   margin-bottom: 15px;
@@ -338,7 +338,7 @@ body {
 }
 
 .gender-subtitle {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
   font-size: 1.8rem;
   color: #e5e7eb;
   font-weight: 600;
@@ -349,7 +349,7 @@ body {
 }
 
 .celebration-message p {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
   font-size: 1.3rem;
   color: #e5e7eb;
   margin: 12px 0;
