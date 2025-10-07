@@ -1,5 +1,6 @@
 // Main Greeting Card - Full Page
 let isCardFlipped = false;
+let gameCompleted = false;
 
 // Initialize the main greeting card
 function initMainGreetingCard() {
@@ -7,9 +8,14 @@ function initMainGreetingCard() {
 
   // Reset state
   isCardFlipped = false;
+  gameCompleted = false;
   mainGreetingCard.classList.remove("flipped");
 
-  // No need to add click event listener to the whole card anymore
+  // Show guess game, hide reveal content
+  const guessGame = document.getElementById("guessGame");
+  const revealContent = document.getElementById("revealContent");
+  if (guessGame) guessGame.style.display = "flex";
+  if (revealContent) revealContent.style.display = "none";
 }
 
 // Handle main card click
@@ -28,12 +34,65 @@ function handleMainCardClick() {
   // Flip the card
   setTimeout(() => {
     mainGreetingCard.classList.add("flipped");
-
-    // Create celebration effect
-    setTimeout(() => {
-      createCelebrationEffect();
-    }, 500);
   }, 300);
+}
+
+// Handle guess selection
+function makeGuess(guess) {
+  if (gameCompleted) return;
+
+  gameCompleted = true;
+
+  // Show result message
+  const resultMessage = document.createElement("div");
+  resultMessage.className = "result-message";
+
+  if (guess === "boy") {
+    resultMessage.textContent = "🎉 Браво! Бебето ќе биде машко! 🎉";
+    resultMessage.classList.add("correct");
+  } else {
+    resultMessage.textContent = "❌ Грешка! Бебето е машко! ❌";
+    resultMessage.classList.add("incorrect");
+  }
+
+  document.body.appendChild(resultMessage);
+
+  // After 3 seconds, show the final reveal
+  setTimeout(() => {
+    resultMessage.remove();
+    showFinalReveal();
+  }, 3000);
+}
+
+// Show final reveal
+function showFinalReveal() {
+  const guessGame = document.getElementById("guessGame");
+  const revealContent = document.getElementById("revealContent");
+
+  if (guessGame) guessGame.style.display = "none";
+  if (revealContent) revealContent.style.display = "flex";
+
+  // Create celebration effect
+  setTimeout(() => {
+    createCelebrationEffect();
+  }, 500);
+
+  // After 20 seconds, return to guess game
+  setTimeout(() => {
+    resetToGuessGame();
+  }, 20000);
+}
+
+// Reset to guess game
+function resetToGuessGame() {
+  const guessGame = document.getElementById("guessGame");
+  const revealContent = document.getElementById("revealContent");
+
+  if (guessGame) guessGame.style.display = "flex";
+  if (revealContent) revealContent.style.display = "none";
+
+  // Reset game state
+  gameCompleted = false;
 }
 
 // Create celebration effect

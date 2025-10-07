@@ -35,7 +35,24 @@
           </div>
         </div>
         <div class="card-back" id="cardBack">
-          <div class="reveal-content">
+          <div class="guess-game" id="guessGame">
+            <div class="game-title">🎯 Погоди го полот! 🎯</div>
+            <div class="game-subtitle">Избери што мислиш дека ќе биде:</div>
+            <div class="choice-container">
+              <div class="choice-option boy-option" onclick="makeGuess('boy')">
+                <div class="choice-icon">👶</div>
+                <div class="choice-text">МОМЧЕ</div>
+              </div>
+              <div
+                class="choice-option girl-option"
+                onclick="makeGuess('girl')"
+              >
+                <div class="choice-icon">👶</div>
+                <div class="choice-text">ЖЕНСКО</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-content" id="revealContent" style="display: none">
             <div class="gender-result">
               <div class="gender-icon">👶</div>
               <div class="gender-title boy">МОМЧЕ!</div>

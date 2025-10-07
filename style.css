@@ -7,7 +7,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%);
+  background: linear-gradient(135deg, #8B4513 0%, #D2B48C 100%);
   min-height: 100vh;
   color: #333;
   overflow-x: hidden;
@@ -204,9 +204,9 @@ body {
 }
 
 .card-back {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: transparent;
   transform: rotateY(180deg);
-  color: white;
+  color: #333;
 }
 
 .main-greeting-card.flipped .card-front {
@@ -280,25 +280,130 @@ body {
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 20px;
-  border: 3px dashed #10b981;
-  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
+  border: 3px dashed #8B4513;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .open-instruction:hover {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(139, 69, 19, 0.1);
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
 }
 
 .open-instruction p {
   font-size: 1.3rem;
-  color: #10b981;
+  color: #8B4513;
   font-weight: 700;
   margin: 0;
 }
 
+/* Guess Game Styles */
+.guess-game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%);
+  color: #333;
+  border-radius: 20px;
+}
+
+.game-title {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-subtitle {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.5rem;
+  color: #475569;
+  margin-bottom: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+.choice-container {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.choice-option {
+  flex: 1;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.choice-option:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.boy-option {
+  background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+}
+
+.girl-option {
+  background: linear-gradient(135deg, #D2B48C 0%, #DEB887 100%);
+}
+
+.choice-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+.choice-text {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Result Messages */
+.result-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1000;
+  animation: popupSlideIn 0.5s ease;
+}
+
+.result-message.correct {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Reveal Content Styles - Centered Design */
 .reveal-content {
   width: 100%;
   height: 100%;
@@ -306,6 +411,65 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+  border-radius: 20px;
+}
+
+.gender-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.gender-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite;
+}
+
+.gender-title {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gender-title.boy {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gender-subtitle {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.8rem;
+  color: #f5f5f5;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.celebration-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.celebration-message p {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  margin: 12px 0;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
 }
 
 .reveal-title {
@@ -529,6 +693,17 @@ body {
   }
 }
 
+@keyframes popupSlideIn {
+  0% {
+    transform: scale(0.5) translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
 @keyframes twinkle {
   0%,
   100% {
@@ -604,11 +779,31 @@ body {
     line-height: 1.5;
   }
 
-  .gender-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+  .choice-container {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
   }
-}
+
+  .choice-option {
+    height: 150px;
+  }
+
+  .choice-text {
+    font-size: 1.5rem;
+  }
+
+  .choice-icon {
+    font-size: 2.5rem;
+  }
+
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .game-subtitle {
+    font-size: 1.3rem;
+  }
 
 @media (max-width: 480px) {
   .container {
@@ -769,5 +964,42 @@ body {
 
   .gender-icon {
     font-size: 1.8rem;
+  }
+}
+
+/* Responsive styles for reveal content */
+@media (max-width: 768px) {
+  .reveal-content {
+    padding: 20px;
+  }
+
+  .gender-title {
+    font-size: 3rem;
+  }
+
+  .gender-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .celebration-message p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reveal-content {
+    padding: 15px;
+  }
+
+  .gender-title {
+    font-size: 2.5rem;
+  }
+
+  .gender-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .celebration-message p {
+    font-size: 1rem;
   }
 }
