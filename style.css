@@ -246,20 +246,21 @@ body {
 }
 
 .card-title {
-  font-family: "Pacifico", cursive, "Comic Sans MS", cursive, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #1e293b;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(30, 41, 59, 0.1);
 }
 
 .card-subtitle {
-  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-size: 2.2rem;
   color: #475569;
   margin-bottom: 40px;
   font-weight: 600;
+  font-style: italic;
 }
 
 .card-message {
@@ -267,12 +268,12 @@ body {
 }
 
 .card-message p {
-  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-size: 1.6rem;
   color: #334155;
   margin: 15px 0;
   line-height: 1.8;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .open-instruction {
@@ -308,9 +309,9 @@ body {
 }
 
 .reveal-title {
-  font-family: "Pacifico", cursive, "Comic Sans MS", cursive, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 30px;
   color: white;
 }
@@ -326,9 +327,9 @@ body {
 }
 
 .gender-title {
-  font-family: "Pacifico", cursive, "Comic Sans MS", cursive, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
@@ -338,10 +339,11 @@ body {
 }
 
 .gender-subtitle {
-  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-size: 1.8rem;
   color: #e5e7eb;
   font-weight: 600;
+  font-style: italic;
 }
 
 .celebration-message {
@@ -349,12 +351,12 @@ body {
 }
 
 .celebration-message p {
-  font-family: "Dancing Script", cursive, "Brush Script MT", cursive, sans-serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-size: 1.3rem;
   color: #e5e7eb;
   margin: 12px 0;
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Message Section */
